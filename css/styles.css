@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+.header {
+    height: auto;
+    margin: auto;    
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1200px;
+    grid-gap: 10px;
+    overflow: hidden;
+    align-items: center;
+    margin: auto;
+}
+
+.textos-hero {
+    grid-column: 1 / 7;
+    padding-right: 20px;
+}
+
+.textos-hero p {
+    text-align: justify;
+}
+
+.img-hero {
+    grid-column: 8 / 13;
+    display: flex;
+    justify-content: center;
+}
+
+.img-hero img {
+    height: 400px;
+}
+
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.parrafo {
+    margin-bottom: 20px; 
+}
+
+.cta  {
+    width: 130px;
+    background-color: #000;
+    color: #ffff;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+/*Services*/
+.services {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(180deg, #fff 50%, #000 50%);
+}
+
+.items {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;  
+    padding: 0 0.125rem;
+}
+
+.item {
+    width: 30%;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    padding: 2.7rem 0;
+    text-align: center;
+}
+
+.item i {
+    font-size: 2.5rem;
+}
+
+.titulo-service {
+    margin: 0.625rem 0;
+}
+
+.about-us {
+    background-color: #000;
+    color: #fff; 
+    height: auto;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.subtitulo {
+    margin-bottom: 1rem;
+}
+
+.textos-about-us {
+     grid-column: 1/-1;
+}
+
+.numbers {
+    font-size: 30px;
+    grid-column: 1/-1;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.number {
+    width: 20%;
+}
+
+/* Mision */
+
+.textos-mission {
+    grid-column: 7/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-mission h3 {
+    margin-bottom: 0.1875rem;
+}
+
+.texto-mission {
+    margin: 1.5rem;
+}
+
+.img-mission {
+    grid-row: 1/-1;
+    grid-column: 1/7;
+}
+
+.img-mission img {
+    width: 100%;
+    height: 400px;
+}
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 5rem;
+}
+
+.textos-footer {
+    grid-column: 1/-1;
+    margin-bottom: 2.7rem;
+}
+
+[class^="footer-item"]{
+    grid-column: span 3;
+    font-size: 1.7rem; 
+}
+
+[class^="footer-item"] a {
+    color: #fff; 
+}
+
+
+ @media screen and (max-width:800px) {
+     .header {
+         height: auto;
+     }
+
+     .grid {
+         grid-gap: 20px;
+     }
+
+     .img-hero, .textos-hero{
+         grid-column: 1/-1;
+     }
+
+     .img-hero {
+         text-align: center;
+     }
+
+     .textos-hero {
+         padding: 0 1rem;
+         margin-top: 3rem;
+     }
+
+     .services {
+         height: auto;
+         margin-top: 3rem;
+
+     }
+
+     .items {
+         height: auto;
+         flex-direction: column;
+     }
+
+     .item {
+         width: 60%;
+         margin: 1rem 0;
+     }
+
+     .img-mission {
+         grid-column: 1/-1;
+         grid-row: 2/3;
+     }
+
+     .textos-mission {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+     }
+ }
+
+ @media screen and (max-width:400px) {
+    .img {
+         max-width: 250px;
+         object-fit: fill;
+    }
+
+    .img-mission {
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .items {
+        padding: 0.3125rem;
+    }
+
+    .item {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .number {
+        width: 55%;
+        border-bottom: 1px dotted #fff;
+        margin-bottom: 1rem;
+        padding-bottom: 0.625rem;
+    }
+
+    .img-mission, .textos-mission {
+        margin: 0;
+        padding: 0;
+    }
+
+    [class^="footer-item"] {
+        grid-column: 1/-1;
+    }
+
+ }
